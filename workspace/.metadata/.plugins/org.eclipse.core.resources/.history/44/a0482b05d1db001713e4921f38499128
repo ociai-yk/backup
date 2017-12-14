@@ -1,0 +1,16 @@
+package com.internousdev.web3.dao;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.internousdev.web3.dto.LoginDTO;
+
+
+public class LoginDAO {
+
+	String username;
+	String password;
+
+	public List<LoginDTO> loginList= new ArrayList<LoginDTO>();
+
+}

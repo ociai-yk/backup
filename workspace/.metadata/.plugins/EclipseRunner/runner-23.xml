@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<runner version="1.0.0">
+<category name="カテゴリーなし">
+<launchConfiguration bookmark="false" name="Android"/>
+<launchConfiguration bookmark="false" name="Capsule"/>
+<launchConfiguration bookmark="false" name="Capusule1"/>
+<launchConfiguration bookmark="false" name="ChkLoadJdbc"/>
+<launchConfiguration bookmark="false" name="ClassTest"/>
+<launchConfiguration bookmark="false" name="ClassTest (1)"/>
+<launchConfiguration bookmark="false" name="HUMAN"/>
+<launchConfiguration bookmark="false" name="HUMAN2"/>
+<launchConfiguration bookmark="false" name="Hello"/>
+<launchConfiguration bookmark="false" name="HelloWorld"/>
+<launchConfiguration bookmark="false" name="HelloWorld (1)"/>
+<launchConfiguration bookmark="false" name="Human"/>
+<launchConfiguration bookmark="false" name="Iphone"/>
+<launchConfiguration bookmark="false" name="Iphone (1)"/>
+<launchConfiguration bookmark="false" name="Iphone (2)"/>
+<launchConfiguration bookmark="false" name="Iphone (3)"/>
+<launchConfiguration bookmark="false" name="Iphone (4)"/>
+<launchConfiguration bookmark="false" name="Iphone (5)"/>
+<launchConfiguration bookmark="false" name="Iphone (6)"/>
+<launchConfiguration bookmark="false" name="SmartPhone"/>
+<launchConfiguration bookmark="false" name="WebProj4"/>
+<launchConfiguration bookmark="false" name="humanName"/>
+<launchConfiguration bookmark="false" name="test"/>
+<launchConfiguration bookmark="false" name="ローカル・ホスト の Tomcat8 (Java8)"/>
+</category>
+</runner>

@@ -1,0 +1,6 @@
+package com.internousdev.web5.action;
+
+
+public class LoginAction {
+
+}

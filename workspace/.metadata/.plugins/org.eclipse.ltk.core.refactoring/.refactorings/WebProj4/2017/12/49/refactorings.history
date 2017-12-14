@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;sql&apos; to &apos;WebProject/src&apos;&#x0D;&#x0A;- 元のプロジェクト: &apos;WebProj4&apos;&#x0D;&#x0A;- 宛先要素: &apos;WebProject/src&apos;&#x0D;&#x0A;- オリジナル要素: &apos;sql&apos;" description="フォルダーをコピー" destination="=WebProject/src" element1="sql" files="0" flags="589830" folders="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1512350615548" units="0" version="1.0"/>
+</session>
