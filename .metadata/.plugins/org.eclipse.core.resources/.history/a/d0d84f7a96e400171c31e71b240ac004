@@ -1,0 +1,12 @@
+package com.internousdev.template2.dao;
+
+
+
+public class BuyItemCompleteDAO {
+
+	private DBConnector db=new DBConnector();
+	private Connection con=db.getConncetion();
+	private D
+
+}
+
