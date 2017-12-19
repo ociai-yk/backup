@@ -27,3 +27,12 @@
 0:0:0:0:0:0:0:1 - - [19/Dec/2017:16:45:50 +0900] "POST /template2/HomeAction.action HTTP/1.1" 200 2063
 0:0:0:0:0:0:0:1 - - [19/Dec/2017:16:45:55 +0900] "POST /template2/LoginAction.action HTTP/1.1" 200 1615
 0:0:0:0:0:0:0:1 - - [19/Dec/2017:16:47:55 +0900] "POST /template2/HomeAction.action HTTP/1.1" 200 2063
+127.0.0.1 - - [19/Dec/2017:16:48:17 +0900] "GET / HTTP/1.1" 404 1019
+0:0:0:0:0:0:0:1 - - [19/Dec/2017:16:48:18 +0900] "GET /template2/ HTTP/1.1" 200 1615
+0:0:0:0:0:0:0:1 - - [19/Dec/2017:16:48:19 +0900] "POST /template2/HomeAction.action HTTP/1.1" 200 2063
+0:0:0:0:0:0:0:1 - - [19/Dec/2017:16:48:28 +0900] "POST /template2/LoginAction.action HTTP/1.1" 200 2662
+0:0:0:0:0:0:0:1 - - [19/Dec/2017:16:49:54 +0900] "GET /template2/HomeAction.action HTTP/1.1" 200 2063
+0:0:0:0:0:0:0:1 - - [19/Dec/2017:16:51:03 +0900] "POST /template2/LoginAction.action HTTP/1.1" 200 2664
+0:0:0:0:0:0:0:1 - - [19/Dec/2017:16:51:08 +0900] "POST /template2/BuyItemAction.action HTTP/1.1" 200 9352
+0:0:0:0:0:0:0:1 - - [19/Dec/2017:16:51:12 +0900] "GET /template2/HomeAction.action HTTP/1.1" 200 2063
+0:0:0:0:0:0:0:1 - - [19/Dec/2017:16:51:16 +0900] "POST /template2/LoginAction.action HTTP/1.1" 200 1615
