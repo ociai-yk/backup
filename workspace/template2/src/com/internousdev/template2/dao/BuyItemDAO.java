@@ -13,7 +13,7 @@ public class BuyItemDAO {
 	private BuyItemDTO buyItemDTO=new BuyItemDTO();
 
 	public BuyItemDTO getBuyItemInfo(){
-		String sql="selsct id, item_name, item_price from item_info_transaction";
+		String sql="select id, item_name, item_price from item_info_transaction";
 
 		try{
 			PreparedStatement ps=con.prepareStatement(sql);

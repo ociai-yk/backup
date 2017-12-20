@@ -5,16 +5,15 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 import com.internousdev.template2.util.DBConnector;
-import com.internous
+import com.internousdev.template2.util.DateUtil;
 
-import com.mysql.jdbc.Connection;
 
 public class BuyItemCompleteDAO {
 
 	private DBConnector db=new DBConnector();
-	private Connection con=db.getConncetion();
+	private Connection con=db.getConnection();
 	private DateUtil dateUtil=new DateUtil();
-	private String sql="insert into user_buy_transaction(item_transaaction_id,tota_price,total_count,user_master_id,pay,insert_date)VALUES (?,?,?,?,?,?)";
+	private String sql="insert into user_buy_transaction(item_transaaction_id,total_price,total_count,user_master_id,pay,insert_date)VALUES (?,?,?,?,?,?)";
 
 	public void buyItemInfo(String item_transaction_id,String user_master_id, String total_price, String total_count,String pay)throws SQLException{
 		try{
@@ -30,7 +29,7 @@ public class BuyItemCompleteDAO {
 		}catch(Exception e){
 			e.printStackTrace();
 		}finally{
-			con.close()
+			con.close();
 		}
 	}
 

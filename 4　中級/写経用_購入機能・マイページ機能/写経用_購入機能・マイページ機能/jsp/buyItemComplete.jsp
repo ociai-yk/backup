@@ -63,7 +63,7 @@
 	<div id="header">
 	 	<div id="pr">
 		</div>
-	</div>
+	</div>t
 	<div id="main">
 		<div id="top">
 			<p>BuyItemComplete</p>
