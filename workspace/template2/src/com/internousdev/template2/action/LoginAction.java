@@ -36,6 +36,7 @@ public String execute(){
 		BuyItemDTO buyItemDTO=buyItemDAO.getBuyItemInfo();
 		session.put("login_user_id", loginDTO.getLoginId());
 		session.put("id", buyItemDTO.getId());
+		System.out.println(buyItemDTO.getItemName());
 		session.put("buyItem_name",buyItemDTO.getItemName());
 		session.put("buyItem_price",buyItemDTO.getItemPrice());
 

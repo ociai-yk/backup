@@ -8,7 +8,7 @@
 <meta http-equiv="Content-Style-Type" content="text/css"/>
 <meta http-equiv="Content-Script-Type" content="text/javascript"/>
 <meta http-equiv="imagetoolbar" content="no"/>
-<meta name="discriotion" content=""/>
+<meta name="descriotion" content=""/>
 <meta name="keywords" content=""/>
 
 <head>
@@ -19,8 +19,8 @@
   margin:0;
   padding:0;
   line-height:1.6;
-  letter-spacing:1.6;
-  font-family:Verdana, Helvetica,sans-seriff;
+  letter-spacing:1px;
+  font-family:Verdana, Helvetica,sans-serif;
   font-size:12px;
   color:#333;
   background:#fff;
@@ -52,7 +52,7 @@
 </style>
 </head>
 <body>
-<div id="footer">
+<div id="header">
   <div id="pr"></div>
 </div>
 <div id="main">
@@ -62,7 +62,7 @@
   <div>
     <h3>登録する内容は以下でよろしいですか。</h3>
     <table>
-      <s:form>
+      <s:form action="UserCreateCompleteAction">
         <tr id="box">
           <td>
              <label>ログインID:</label>
@@ -71,7 +71,17 @@
             <s:property value="loginUserId" escape="false"/>
           </td>
         </tr>
-        <tr>
+        <tr id="box">
+<td>
+<label>ログインPASS:</label>
+</td>
+<td>
+<s:property value="loginPassword" escape="false" />
+</td>
+</tr>
+
+<tr id="box">
+
           <td>
              <label>ユーザー名:</label>
           </td>
@@ -88,9 +98,8 @@
 
     </table>
   </div>
-  <div></div>
 </div>
-<div></div>
+<div id="footer"></div>
 
 </body>
 </html>

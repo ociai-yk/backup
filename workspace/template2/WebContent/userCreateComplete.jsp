@@ -8,7 +8,7 @@
 <meta http-equiv="Content-Style-Type" content="text/css"/>
 <meta http-equiv="Content-Script-Type" content="text/javascript"/>
 <meta http-equiv="imagetoolbar" content="no"/>
-<meta name="discriotion" content=""/>
+<meta name="descriotion" content=""/>
 <meta name="keywords" content=""/>
 <title>UserCreateComplete画面</title>
 <style type="text/css">
@@ -17,7 +17,7 @@
   padding:0;
   line-height:1.6;
   letter-spacing:1px;
-  font-family:Verdana, Helvetica, sans-seriff;
+  font-family:Verdana, Helvetica, sans-serif;
   font-size:12px;
   color:#333;
   background:#fff;
@@ -52,7 +52,7 @@
 </head>
 <body>
 
-<div id="footer"></div>
+<div id="header"></div>
 <div id="main">
   <div id="top">
     <p>UserCreateConfirm</p>

@@ -8,7 +8,7 @@
 <meta http-equiv="Content-Style-Type" content="text/css"/>
 <meta http-equiv="Content-Script-Type" content="text/javascript"/>
 <meta http-equiv="imagetoolbar" content="no"/>
-<meta name="discriotion" content=""/>
+<meta name="descriotion" content=""/>
 <meta name="keywords" content=""/>
 
 <title>UserCreate画面</title>
@@ -41,7 +41,7 @@
   }
   #top{
   width:780px;
-  margin:30 auto;
+  margin:30px auto;
   border:1px solid #333;
   }
   #footer{
@@ -90,6 +90,7 @@
               <input type="text" name="userName" value=""/>
             </td>
           </tr>
+          <s:submit value="登録"/>
         </s:form>
       </table>
       <div>
