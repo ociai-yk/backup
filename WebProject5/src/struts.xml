@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts SYSTEM "http://struts.apache.org/dtds/struts-2.3.dtd" PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN">
+<struts>
+<constatn value="true" name="struts.devMode"/>
+<package name="com.internousdev.webproj5.action" extends="struts-defult">
+  <action name="HelloStrtsAction" method="execute" class="com.internousdev.webproj5.action">
+    <result name="success"></result>
+    <result name="error"></result>
+  </action>
+</package>
+
+</struts>

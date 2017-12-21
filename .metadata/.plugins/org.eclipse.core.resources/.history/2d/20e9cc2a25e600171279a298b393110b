@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts SYSTEM "http://struts.apache.org/dtds/struts-2.3.dtd" PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN">
+<struts>
+<constatn value="true" name="struts.devMode"/>
+<package name=""
+</package>
+
+</struts>
