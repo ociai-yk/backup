@@ -1,0 +1,16 @@
+set names utf8;
+set foreign_key_checks=0;
+drop database if exists ecsitee;
+
+create database if not exists ecsitee;
+use ecsitee;
+
+create table login_user_transaction(
+id  int not null primary key auto_increment,
+login_id varchar(16) unique,
+login_pass varchar(16),
+user_name varchar(50),
+insert_date datetime,
+updated_data datetime
+);
+insert into login_user_transaction values("internous","internous01","test");

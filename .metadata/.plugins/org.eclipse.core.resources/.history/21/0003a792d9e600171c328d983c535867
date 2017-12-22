@@ -1,0 +1,16 @@
+package com.internousdev.ecsite.dao;
+/*
+ * Action‚©‚ç’¼Ú‘—‚ç‚ê‚Ä‚«‚½’l‚ğˆ—‚µDatabase‚ÉÚ‘±
+ * Database‚Ì’l”äŠr‚µDTO‚ğ‰î‚µŒ‹‰Ê‚Ì’l‚ğAction‚É“n‚·
+ */
+
+import
+
+
+import com.internousdev.ecsite.dto.LoginDTO;
+import com.internousdev.ecsite.util.DBConnector;
+
+public class LoginDAO {
+
+
+}
