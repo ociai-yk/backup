@@ -10,7 +10,7 @@
 <meta http-equiv="imagetoolbar" content="no"/>
 <meta name="descriotion" content=""/>
 <meta name="keywords" content=""/>
-<title>CreateUser画面</title>
+<title>HOME画面</title>
 <style type="text/css">
 body{
 margin:0;
@@ -53,19 +53,6 @@ clear:both;
 </style>
 </head>
 <body>
-
-<div id="header"></div>
-<div id="main">
-<div id="top"> USER CREATE</div>
-<div>
-  <h3>Please fill in the blanks to create User.</h3>
-</div>
-<div>
-  <s:form action="UserCreateAction"></s:form>
-</div>
-
-</div>
-<div id="footer"></div>
 
 </body>
 </html>

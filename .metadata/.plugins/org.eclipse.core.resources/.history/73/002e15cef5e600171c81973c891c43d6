@@ -55,16 +55,7 @@ clear:both;
 <body>
 
 <div id="header"></div>
-<div id="main">
-<div id="top"> USER CREATE</div>
-<div>
-  <h3>Please fill in the blanks to create User.</h3>
-</div>
-<div>
-  <s:form action="UserCreateAction"></s:form>
-</div>
-
-</div>
+<div id="main"></div>
 <div id="footer"></div>
 
 </body>
