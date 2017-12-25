@@ -11,5 +11,5 @@ public class UserCreateCompleteDAO {
 
 	private DBConnector db=new DBConnector();
 	private Connection con=db.getConnection();
-	private DateUtil
+	private DateUtil;
 }

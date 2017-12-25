@@ -58,7 +58,7 @@ clear:both;
 <div id="main">
   <div id="top">HOME</div>
   <div>
-    <s:form method="HomeAction">
+    <s:form action="UserCreateAction">
     <s:submit value="新規登録"/>
     </s:form>
   </div>

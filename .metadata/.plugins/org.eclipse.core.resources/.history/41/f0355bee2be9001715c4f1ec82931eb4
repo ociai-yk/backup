@@ -1,0 +1,5 @@
+package com.internousdev.MyPage.action;
+
+public class HomeAction {
+
+}

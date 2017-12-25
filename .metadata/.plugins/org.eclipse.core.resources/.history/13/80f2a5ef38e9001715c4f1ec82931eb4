@@ -1,0 +1,15 @@
+package com.internousdev.MyPage.action;
+
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.internousdev.MyPage.dao.BuyItemDAO;
+import com.internousdev.MyPage.dao.LoginDAO;
+import com.internousdev.MyPage.dto.BuyItemDTO;
+import com.internousdev.MyPage.dto.LoginDTO;
+import com.opensymphony.xwork2.ActionSupport;
+
+public class LoginAction {
+
+}

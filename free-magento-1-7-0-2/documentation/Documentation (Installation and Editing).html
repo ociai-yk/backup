@@ -1,0 +1,436 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Documentation</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="css/fonts.css" type="text/css" media="all">
+  <!--[if lt IE 7]>
+    <script type="text/javascript" src="js/ie_png.js"></script>
+    <script type="text/javascript">
+        ie_png.fix('.png');
+    </script>
+  <![endif]-->
+  <!--[if lt IE 9]>
+  	<script type="text/javascript" src="js/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <div id="main">
+      <div class="inside">
+        
+            <!-- header -->
+          <header id="header">
+            <div class="inside">
+              <h1>Magento theme installation manual</h1>
+            </div>
+          </header>
+          <section id="content">
+            <article>
+              <h2>Table of Contents</h2>
+              <div class="inner">
+                <ol class="table_content">
+                  <li><a href="#getting_started">Magento installation from scratch:</a>
+                     <ul>                    
+                        <li><a href="#magento_archive">Downloading Magento engine</a></li>
+                        <li><a href="#magento_dump_install">Magento template sample data installation</a></li>
+                        <li><a href="#magento_install">Magento template installation</a></li>
+                        <li><a href="#magento_engine_install">Magento engine installation</a></li>
+                     </ul>
+                   </li>
+                  <li><a href="#getting_started_with_magento">Installing Magento template over existing website</a>
+                      <ul>
+                        <li><a href="#magento_template_config">Manual template configuration</a></li>
+                        <li><a href="#logo_config">Logo configuration</a></li>
+                        <li><a href="#magento_pages">Pages configuration</a></li>
+                        <li><a href="#magento_static_blocks">Static blocks configuration</a>
+                       </li>
+                     </ul>
+                  </li>
+                  <li><a href="#general_customization">General Customization</a>
+                  	<ul>
+                    	<li><a href="#magento_edit_pages">How to edit pages</a></li>
+                        <li><a href="#magento_edit_static_blocks">How to edit static blocks</a></li>
+                        <li><a href="#magento_currencies">How to configure Currency module</a></li>
+                        <li><a href="#magento_polls">How to edit Polls module</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#end">Conclusion</a></li>
+                </ol>
+              </div>
+            </article>       
+    
+            
+            <!-- Getting started begin -->            
+              <h2 id="getting_started">Magento installation from scratch:</h2>          
+            <div class="inner">
+                  <h3 id="magento_archive">Downloading Magento engine</h3>
+                  
+                 <p> Make sure to check the template software requirements at the preview page for the required version of Magento. We can't guarantee the correct work of the template if your version of Magento engine doesn't meet the requirements. </p>
+                 
+                <ol>
+                    <li>Visit Magento official website at <a href="http://www.magentocommerce.com/">http://www.magentocommerce.com/</a></li>                
+                    <li>From the top menu select <strong>Download  > Community Edition.</strong></li>
+                    <li>From the download options list select <strong>Full Release </strong>(.zip format) to download the most recent version of Magento engine</li>
+                </ol>
+                
+              <p><img class="img-border" src="images/magento_download.jpg" width="685" height="547" alt="Magento download page"></p>
+                <p>If you need earlier version of Magento engine:</p>            
+                <ol>              
+                    <li>From the top menu select  <strong>Download  > Community Edition.</strong></li>
+                    <li>select tab  <strong>Release Archives</strong>.</li>
+                    <li>Locate and download the required version</li>
+                </ol>  
+                
+                <p><img class="img-border" src="images/magento_release_archive.jpg" width="683" height="499" alt="Magento Release Archives page"></p>
+                
+                <p>When you are done with the Magento engine download you need to extract the files from the package downloaded and upload them to your hosting server. Feel free to check the tutorials on how to extract the files with <a href="http://info.template-help.com/extract-archived-files-windows-os.html">WinZip (Windows OS)</a> and <a href="http://info.template-help.com/extract-archived-files-mac-os.html">StuffitExpander(MAC OS)</a> and <a href="http://info.template-help.com/how-upload-files-server-2.html">how to upload files to the hosting server</a></p>
+                
+                <p>Alternatively, you can use the <strong>Downloader</strong> option. It allows you to download and upload Magento engine files faster. But note that the Downloader can be used for the installation of the latest version of Magento engine only. It can also be incompatible with some hosting servers and cause certain issues.</p>
+                
+                <p>To use the Downloader option please do the following:</p>
+                
+                <ol>              
+                    <li>From the top menu select  <strong>Download  > Community Edition.</strong></li>
+                    <li>Select Downloader option and download the package</li>
+                    <li>Extract the package files</li>
+                    <li>In your browser address bar input your domain name and root to the directory with Magento files</li>
+                    <li>Magento Downloader will validate your hosting server for the compatibility with Magento e-commerce solution</li>
+                    <li>If your server is compatible in the Deployment section specify the necessary FTP server details (hostname, username, password)</li>
+                    <li>If the details are valid you can install Magento engine. But please don't hurry. Decide if you want to install template sample data or not. </li>
+                </ol>  
+             </div>
+                
+            <h3 id="magento_dump_install">Magento template sample data installation</h3>
+                <div class="inner">
+                
+                <p class="notification-box">Please note: the dump.sql.gz file should be imported into the clear database BEFORE you install Magento.</p>
+                
+                <p>Magento template package contains the sample data file (dump.sql or dump.gz). This file is located in the <strong>/sources/sample_data </strong>directory of your template package. This file install the template sample data and makes your website look same as the template preview. </p>
+                <p>To install the dump file please perform the following:</p>            
+                <ol>
+                    <li>Open your   database management tool (PhpMyAdmin). It can be accessed through your Hosting Control Panel.</li>
+                    <li>Create new database.</li>
+                    <li>Select the database you created for the Magento CMS.</li>
+                    <li>Select "<strong>IMPORT</strong>" option and click "<strong>Browse</strong>" button</li>
+                    <li>Navigate to the "<strong>/sources/sample_data</strong>" folder of the template and select <strong>dump.sql.gz</strong> file</li>
+                    <li>Press "<strong>GO</strong>" button. </li>
+                    <li>If you don't have much experience with PhpMyAdmin tool, please check this <a href="http://info.template-help.com/phpmyadmin-how-to-import-sample-data-dump-file.html">tutorial</a>.</li>
+                </ol>
+                
+                <strong></strong>
+                
+                
+                
+              <p class="error-box">Do not use the dump.sql.gz file if you have a running store. The dump.sql.gz file import into your live database will remove your products. If you don't want to install the template sample content please install Magento over clear database. Skip the sample data installation step of this manual. </p>
+                
+				</div>
+                
+                <h3 id="magento_install">Magento template installation.</h3>
+                
+                <div class="inner">
+                
+<p>The next step of the setup procedure is the template installation. The template should be installed in any case: if you use sample data or not. </p>
+                
+                <ol>
+                    <li>First of all open the template package and go to the <strong>theme000</strong> folder.</li>
+                    <li><span>Upload <strong>theme000 folder contents</strong> to the Magento installation directory (upload &quot;app&quot;</span>, &quot;skin&quot; and other folders). These folders contain the theme files. They will not affect your existing files.</li>
+                    <li>If you have imported the <strong>dump.sql.gz</strong> file and are going to use the template sample products you need to upload the product images. Upload the &quot;<strong>media&quot;</strong> folder from the template sources/sample_data directory to the Magento installation root directory.</li>
+                    <li>If you didn't install the <strong>dump.sql.gz</strong> file there is no need to upload the &quot;media&quot; folder.</li>
+                </ol>
+                
+              <p>The template is installed now and you can start the Magento installation procedure</p>
+                
+                </div>
+                
+                <h3 id="magento_engine_install">Magento engine installation.</h3>
+                    
+                    <div class="inner">
+                    
+                    <ol>
+                      <li>Open your browser (Internet Explorer, Mozilla Firefox, Google Chrome, Opera etc) and please type your domain name with the root to the Magento installation directory into the address bar.</li>
+                        <li>Now please follow the instructions on the screen. You can check the detailed <a href="http://info.template-help.com/how-install-magento-engine.html">Magento installation video tutorial</a>. This manual describes just the key tips of the installation procedure</li>
+                        <li>On Step 3 of the installation you should specify your database details. You can create the database and the access details using your hosting control panel. Feel free to check the detailed tutorial on <a href="http://info.template-help.com/how-create-database.html">how to create a database</a>.
+                          <ul>
+                            <li><strong>Database Name</strong> - your database used for Magento installation</li>
+                                <li><strong>User Name  </strong>- username to access the database</li>
+                                <li><strong>User Password</strong> — password to access the database</li>
+                            </ul>                   
+                            <p><img src="images/magento_install.jpg" class="img-border" alt="Magento installation. Configuration" title="" /></p>
+                            <p><b>When you are done click the Continue button.</b></p>
+                        </li>
+                        <li>Then you need to create website administrator account. Input your personal data and create administrator username and password
+                         <p><img src="images/magento_account.jpg" class="img-border" alt="Magento installation. Admin account" title="" /></p>
+                         <p class="notification-box">Keep these details safe.</p> </li>
+                        <li>On the last step of installation please write down the Magento Encryption Key.                          	
+                          <p>The Magento Encryption Key is generated in the process of Magento Installation. It is used for the encryption and the security storage of the sensitive data in the script's database.</p>
+                           <p><img src="images/magento_crypt.jpg" class="img-border" alt="Magento installation. Encryption Key" title="" /></p>
+                           <p> The Magento Encryption Key is stored in the <strong>/app/etc/local.XML</strong> file.</p>
+                            The code which you should look for is:	<br />	
+                            
+                            <pre>
+                            &lt;crypt&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;key&gt;&lt;![CDATA[ENCRYPTION_KEY]]&gt;&lt;/key&gt;
+                            &lt;/crypt&gt;</pre>
+                            
+                          <p> The ENCRYPTION_KEY string is replaced by the actual encryption key.                    
+                            It is required in case you want to move your store data to a new Magento site. The Encryption key is used to recover the encrypted data.                    
+                          When you migrate your database content to a new Magento installation, make sure that the encryption key from the existing installation is specified in the new web site's local.xml file. Otherwise the encrypted data stored in the new database will not work.</p>
+                        </li>
+                        <li>Congratulations. You have successfully finished the Magento installation procedure.</li>
+                    </ol>
+                  </div>         
+    
+              
+                 <h2 id="getting_started_with_magento">Installing Magento template over existing website</h2>  
+                 
+                <div class="inner">
+        
+                <p>First of all please make sure your Magento installation meets the template requirements. If you use an outdated version of Magento you need to upgrade it. Don't forget to backup the files and the database. Magento upgrade instructions are available at <a href="http://www.magentocommerce.com/wiki/">Magento Wiki</a> website.</p>
+                
+				<p>If your Magento engine meets the template requirements you can start the template installation. </p>
+                
+                <ol>
+                  <li>Open the template package and go to the <strong>theme000</strong> folder.</li>
+                  <li>Upload <strong>theme000 folder contents</strong> to the Magento installation directory (upload "<strong>app</strong>", "<strong>skin</strong>" and other folders). These folders contain the theme files. They will not affect your existing files.</li>
+                </ol>
+                </div>
+                
+				
+                <h3 id="magento_template_config">Manual template configuration</h3>
+                  
+                  <div class="inner">
+                <p>This step is used to configure the template manually. </p>
+                
+                <ol>
+                	<li>Activate new theme<ul>
+                            <li>Open Magento admin panel and in the top menu select <strong>System > Design</strong></li>
+                            <li>Click "<strong>Add Design Change</strong>" button</li>
+                            <li>In the "<strong>Custom Design</strong>" field select the theme name (in this case theme000)</li>
+                            <li>Click "<strong>Save</strong>" button to confirm the changes</li>  
+                        </ul>
+                    </li>
+                    <li>Reindex data
+                    	<ul>
+                            <li>Open Magento admin panel and in the top menu select <strong>System > Index Management</strong></li>
+                            <li>Check the "<strong>Select All</strong>" box in the top left corner</li>
+                            <li>Then on the right in the  "Actions" field select  "<strong>Reindex Data</strong>"</li>
+                            <li>Click the "<strong>Submit</strong>" button</li>
+                            <li>Please be patient, this may take for a while.</li>
+                        </ul>
+                    </li>
+                </ol>
+                </div>
+                
+                
+                <h3 id="logo_config">Logo configuration</h3>
+                
+                <div class="inner">
+                
+                <p>Please follow this step if you have issues with the logo image.</p>
+                
+                <ul>
+                    <li>Open Magento admin panel and in the top menu select System<strong> > Configuration</strong></li>
+                    <li>Select the  "<strong>Design</strong>" tab</li>
+                    <li>In the "<strong>Header</strong>" section, edit the "<strong>Logo Image Src</strong>" field value. Change it from &quot;<strong>gif</strong>&quot; to &quot;<strong>png</strong>&quot;</li>
+                    <li>Click the  "<strong>Save Config</strong>" button</li>
+                </ul>
+                    
+                
+                
+                </div>
+        
+                <h3 id="magento_pages">Pages configuration</h3>   
+                
+                <div class="inner">             
+
+                
+                <p>The template home page can contain such layout objects as - banners, slider, gallery, flash animation etc. To add the blocks to your store please use the instructions below.</p>
+                <p class="notification-box">We recommend you to disable the WYSIWYG editor. To do this from the admin top menu select <strong>System > Configuration</strong>. Open the "<strong>Content Management</strong>" section and in the <strong>WYSIWYG Options</strong> window set "<strong>Enable WYSIWYG Editor</strong>" option to "<strong>Disabled Completely</strong>".</p>
+                
+                <ol>
+                    <li>From the top menu select  — <strong>CMS > Pages</strong>. Pages Home page, About Us and Customer Service should already be available so you don't need to add them. You only need to update the page's HTML and XML content. </li>
+                    <li>In case you need to add new page click the &quot;<strong>Add New Page</strong>&quot; button in the top right corner. </li>
+                    <li>Open the page and select the <strong>Content</strong> tab. Content tab contains the HTML code of the page. You can take the page HTML code from the appropriate source file. You can see list of source files in the table below. Copy the code from the source file and paste to the content area. </li>
+                    <li>When you are done with the HTML code switch to the &quot;<strong>Design</strong>&quot;. It contains the page XML code. The XML code should be copied the same way as HTML from the source file. Copy the XML code to the "<strong>Layout Update XML</strong>" area.</li>
+                    <li>Don't forget to select the valid &quot;<strong>Layout</strong>&quot; option. </li>
+                </ol>       
+
+				<p>In case of any difficulties please check the detailed tutorial on <a href="http://info.template-help.com/magento-how-to-install-sample-content-pages-manually.html" target="_blank">how to configure pages manually</a></p>
+          
+                <table>
+                    <tr>
+                        <th>#</th>
+                        <th>Page Name</th>                      
+                        <th>Page HTML (Content tab)</th>
+                        <th>Page XML (Design tab)</th>
+                        <th>Layout</th>
+                    </tr>
+                    <tr>
+                        <td>1.</td>
+                        <td>Home Page</td>                        
+                        <td>sources\demo\pages\home_page.phtml</td>
+                        <td>sources\demo\pages\home_page.xml</td>
+                        <td>1 column</td>                         
+                    </tr>
+                    <tr>
+                        <td>2.</td>
+                        <td>About  Us</td>                        
+                        <td>sources\demo\pages\about_us.phtml</td>
+                        <td>NA</td>
+                        <td>1 column</td>                         
+                    </tr>
+                    <tr>
+                        <td>3.</td>
+                        <td>Customer Service</td>                        
+                        <td>sources\demo\pages\customer_service.phtml</td>
+                        <td>NA</td>
+                        <td>1 column</td>                         
+                    </tr>
+                    <tr>
+                        <td>4.</td>
+                        <td>Privacy Policy</td>                        
+                        <td>sources\demo\pages\privacy_policy.phtml</td>
+                        <td>NA</td>
+                        <td>1 column</td>                         
+                    </tr>
+                </table>
+            
+            <p class="info-box">The source files with the pages code are stored in the &quot;<strong>sources\demo\pages\</strong>&quot; directory of the template package. </p>
+                 
+           </div>
+                 
+<h3 id="magento_static_blocks">Static blocks configuration</h3>
+
+<div class="inner">
+
+			<p>When you are done configuring pages you need to configure the static blocks. The procedure is similar - you need to copy the code from the source files.            </p>
+			<ol> 
+                <li>From the top menu select — <strong>CMS >  Static Blocks</strong>. </li>
+                  <li>Click &quot;Add New block&quot; button in the right corner to add new block. </li>
+                  <li>Input the block name and identifier. You can get the block details from the table below. </li>
+                  <li>Open the block source file and copy the HTML code to the content area</li>
+            </ol>
+			
+			<p>In case of any difficulties please check the detailed tutorial on <a href="http://info.template-help.com/magento-how-to-install-sample-static-blocks-manually.html" target="_blank">how to configure static blocks manually</a></p>
+
+            
+            <p class="info-box">Please note: some templates do not have any static blocks so the table below can be empty. </p>
+		<p><img src="images/static_block.jpg" class="img-border" alt="Magento Static Block. Editing" title="" /></p>
+            
+
+ 		<table>
+            <tr>
+                <th>#</th>
+                <th>Block Name</th>
+                <th>Block Title</th>
+                <th>Identifier</th>
+                <th>Content</th>                
+            </tr>
+            <tr>
+                <td>1.</td>
+                <td>Footer Links</td>
+                <td>Footer Links</td>
+                <td>footer_links</td>
+                <td>sources\demo\static_blocks\footer_links.phtml</td>
+            </tr>
+             <tr>
+                <td>2.</td>
+                <td>Footer list</td>
+                <td>Footer list</td>
+                <td>footer_list</td>
+                <td>sources\demo\static_blocks\footer_list.phtml</td>
+            </tr>
+            <tr>
+                <td>3.</td>
+                <td>Custom tab</td>
+                <td>Custom tab</td>
+                <td>custom_tab</td>
+                <td>sources\demo\static_blocks\custom_tab.phtml</td>
+            </tr>
+            <tr>
+                <td>4.</td>
+                <td>Contact block</td>
+                <td>Contact block</td>
+                <td>contact_block</td>
+                <td>sources\demo\static_blocks\contact_block.phtml</td>
+            </tr>
+        </table>
+		
+            <p class="info-box">The source files with the static blocks code are stored in the &quot;<strong>sources\demo\static_blocks\</strong>&quot; directory of the template package. </p>
+ 
+<p>When you are done configuring store pages and blocks your store is ready to go. </p>
+                 </div>
+                 
+                 <h2 id="general_customization">General Customization</h2>
+                 
+                 <p class="notification-box">While editing the pages and static blocks we recommend you to disable the WYSIWYG editor. To do this from the admin top menu select <strong>System > Configuration</strong>. Open the "<strong>Content Management</strong>" section and in the <strong>WYSIWYG Options</strong> window set "<strong>Enable WYSIWYG Editor</strong>" option to "<strong>Disabled Completely</strong>".</p>
+
+                 
+                 <h3 id="magento_edit_pages">How to edit pages</h3>
+                 <div class="inner">
+					<ol>
+                    <li>From the top menu select  — <strong>CMS > Pages</strong>. All store pages are available here. Open any of them to access the page content.  
+                     <p><img src="images/magento_home_page.jpg" class="img-border" alt="Magento CMS Pages. Home Page" title="" /></p>
+                    </li>
+                    <li>From the left column select the Content tab. It contains the HTML code of the page. You are free to edit the code the way you need. </li>
+                    <li>Switch to "<strong>Design</strong>" tab to get access to the page XML content. XML code let's you embed Magento static blocks or widgets into the page.</li>
+                </ol>                 
+                </div>
+                
+                <h3 id="magento_edit_static_blocks">How to edit static blocks</h3>
+                <div class="inner">
+			<ol> 
+                <li>From the top menu select — <strong>CMS >  Static Blocks</strong>. 
+                  <p><img src="images/list_of_blocks.jpg" class="img-border" title="Magento Static Blocks" alt="" />
+                  For example please open the static block. You can see its HTML content. In this example we use the banners block. Using the HTML code you can easily change the banner image and link.<img src="images/static_block.jpg" class="img-border" alt="Magento Static Block. Editing" title="" /></li></ol>
+                </div>
+                 
+                 
+  <h3 id="magento_currencies">How to configure Currency module</h3>
+                 
+                 <div class="inner">
+                    <ol>
+                        <li>Open Magento admin panel</li>
+                        <li>From the top menu select <strong>System > Configuration</strong></li>
+                        <li>Then click <strong>General</strong> and select the tab <strong>Currency Setup</strong></li>
+                        <li>In the <strong>Currency Options</strong> holding the CTRL button select the allowed currencies that can be used to display prices in your Magento store. When you are done click the <strong>Save Config</strong> button to save your changes.</li>
+                        <li>Then go to <strong>System > Manage Currency</strong> Rates from the top menu</li>
+                        <li>Set the required currency rate values or use the Import Service. Click the <strong>Save Currency Rates</strong> button to save your changes.</li>                
+                    </ol>
+                   </div>
+                    
+                <h3 id="magento_polls">How to edit Polls module</h3>
+                <div class="inner">
+                     <p>From the top menu select <strong>CMS > Polls</strong></p>
+                     <p><img src="images/magento_polls.jpg" class="img-border" alt="Magento Polls Module. Accessing" title="" /></p>
+                     <p>Open the necessary polls module. There you can change the poll items.</p>
+                     <p><img src="images/poll_answers.jpg" class="img-border" alt="Magento Polls Module. Editing" title="" /></p>
+               </div> 
+               
+                        
+                
+               <h2 id="end">Conclusion</h2>
+               <div class="inner">
+                    <p>Magento engine is a great solution for your online store. The default engine package contains all modules necessary for successful sales. 
+                    Open source allows you to offer really outstanding merchant possibilities for your customers.  Due to the quite complex engine structure advanced usage of Magento will require much time and aspiration. You'll need much more than this manual. </p>
+                    <p>The following resources will help you to become a true Magento professional:</p>
+                    <ul>
+                        <li><a href="http://www.magentocommerce.com/support/magento-user-guide-book">The Official Magento User Guide</a></li>
+                        <li><a href="http://www.magentocommerce.com/wiki/">Magento Wiki</a></li>
+                        <li><a href="http://www.magentocommerce.com/knowledge-base">Knowledge Base</a></li>
+                        <li><a href="http://www.magentocommerce.com/boards/">Magento Forum</a></li>
+                        <li><a href="http://www.siteground.com/tutorials/magento/">Siteground Magento tutorials</a></li>
+                        <li><a href="http://info.template-help.com/ecommerce/magento/magento-tutorials/">Template-help Magento tutorials</a></li>
+                    </ul>
+               </div>
+			   
+			   
+			   
+           </section>
+      </div>
+  </div>
+</body>
+</html>

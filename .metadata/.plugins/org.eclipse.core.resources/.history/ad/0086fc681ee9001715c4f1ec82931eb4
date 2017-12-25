@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+<constant value="true" name="struts.devMode"/>
+ <package name="com.internousdev.ecsiteCreateUser.action" extends="struts-default">
+<!-- 対象のpackageを設定 -->
+
+
+
+-<package name="com.internousdev.ecsiteCreateUser.action" extends="struts-default">
+
+<!-- UserCreateAction -->
+
+
+
+<action name="UserCreateAction" method="execute" class="com.internousdev.ecsiteCreateUser.action.UserCreateAction">
+
+<result name="success">createUser.jsp</result>
+
+</action>
+
+<!-- UserCreateConfirmAction -->
+
+
+
+<action name="UserCreateConfirmAction" method="execute" class="com.internousdev.ecsiteCreateUser.action.UserCreateConfirmAction">
+
+<result name="success">userCreateConfirm.jsp</result>
+
+<result name="error">userCreate.jsp</result>
+
+</action>
+
+<!-- UserCreateCompleteAction -->
+
+
+
+<action name="UserCreateCompleteAction" method="execute" class="com.internousdev.ecsite.action.UserCreateCompleteAction">
+
+<result name="success">userCreateComplete.jsp</result>
+
+</action>
+
+
+
+</package>
+</struts>

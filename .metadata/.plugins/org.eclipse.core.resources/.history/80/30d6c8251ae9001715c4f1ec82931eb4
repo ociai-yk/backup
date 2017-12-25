@@ -1,0 +1,13 @@
+package com.internousdev.ecsiteCreateUser.action;
+
+import java.sql.SQLException;
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.internousdev.ecsiteCreateUser.dao.UserCreateCompleteDAO;
+import com.opensymphony.xwork2.ActionSupport;
+public class UserCreateCompleteAction extends ActionSupport implements SessionAware{
+	
+
+}
