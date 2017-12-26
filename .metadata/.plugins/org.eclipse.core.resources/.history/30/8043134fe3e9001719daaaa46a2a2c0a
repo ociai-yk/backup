@@ -1,0 +1,13 @@
+package com.internousdev.MyPage.dao;
+
+import java.sql.Connection;
+
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+import com.internousdev.MyPage.dto.BuyItemDTO;
+import com.internousdev.MyPage.util.DBConnector;
+
+public class BuyItemDAO {
+
+}

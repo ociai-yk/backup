@@ -78,7 +78,7 @@
 		  <s:submit value="ログイン"/>
 		</s:form>
 		<br/>
-		<div id="txt-link">
+		<div id="text-link">
         <p>Homeへ戻る場合は<a href='<s:url action="HomeAction" />'>こちら</a></p>
 			</div>
 		</div>

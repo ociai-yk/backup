@@ -10,29 +10,36 @@ import com.internousdev.MyPage.util.DBConnector;
 
 public class BuyItemDAO {
 
-    private DBConnector db=new DBConnector();
-    private Connection con=db.getConnection();
-    private BuyItemDTO buyItemDTO=new BuyItemDTO();
+	private DBConnector db=new DBConnector();
+	private Connection con=db.getConnection();
 
-    public BuyItemDTO getBuyItemInfo(){
-    	String sql="select id, item_name, item_price from item_info_transaction";
+	BuyItemDTO buyItemDTO=new BuyItemDTO();
 
-    	try{
-    		PreparedStatement ps=con.prepareStatement(sql);
-    		ResultSet rs=ps.executeQuery();
+	public BuyItemDTO getBuyItemInfo(){
 
-    		if(rs.next()){
-    			buyItemDTO.setId(rs.getInt("id"));
-    			buyItemDTO.setItemName(rs.getString("item_name"));
-    			buyItemDTO.setItemPrice(rs.getString("item_price"));
+		String sql="select id, item_name, item_price from item_info_transaction";
 
-    		}
-    	}catch(Exception e){
-    		e.printStackTrace();
-    	}
-    	return buyItemDTO;
-    }
-    public BuyItemDTO getBuyItemDTO(){
-    	return buyItemDTO;
-    }
+		try{
+			PreparedStatement ps=con.prepareStatement(sql);
+			ResultSet rs=ps.executeQuery();
+
+			if(rs.next()){
+				buyItemDTO.setId(rs.getInt("id"));
+				buyItemDTO.setItemName(rs.getString("item_name"));
+				buyItemDTO.setItemPrice(rs.getString("item_price"));
+
+
+			}
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+
+		return buyItemDTO;
+	}
+
+	public BuyItemDTO getbuyItemInfo(){
+		return buyItemDTO;
+	}
+
+
 }

@@ -10,76 +10,111 @@ import com.internousdev.MyPage.dto.BuyItemDTO;
 import com.internousdev.MyPage.dto.LoginDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
-public class LoginAction extends ActionSupport implements SessionAware{
 
-	/*
+
+
+
+	/**
 	 * ログイン認証処理
-	 * login.jspの画面上に入力されたloginUserIdとloginPasswordをDAOに渡す
-	 * DAOが受け取ったデータをDBに問い合わせし、DTO型にデータを格納し他ものを
-	 * Actionが受け取り、認証されれば購入に進む。エラーならloginに戻る
+	 * Login.jspからログインID、ログインパスワードを受け取り
+	 * DBへ問い合わせを行います。
+	 *
+	 * @author internous
+	 * @param loginUserId
+	 * @param loginPassword
+	 *
+	 * @return result
 	 */
-	private String loginUserId;
-	private String loginPassword;
-	public Map<String,Object>session;
-	private LoginDAO loginDAO=new LoginDAO();
-	private LoginDTO loginDTO=new LoginDTO();
-	private BuyItemDAO buyItemDAO = new BuyItemDAO();
+	public class LoginAction extends ActionSupport implements SessionAware{
 
-	public String execute(){
-		String result=ERROR;
+		/**
+		 * ログインID
+		 */
+		private String loginUserId;
 
-//
+		/**
+		 * ログインパスワード
+		 */
+		private String loginPassword;
 
-		//ログイン実行 データを渡す
-		loginDTO=loginDAO.getLoginUserInfo(loginUserId, loginPassword);
-		//キーワードloginUserでloginDTO（UserIdとPasswordを格納したもの）
-		//をsessionに入れる
-		session.put("loginUser",loginDTO);
+		/**
+		 * ログイン情報を格納
+		 */
+		public Map<String, Object> session;
 
-//DTOを通じてデータがActionに返されてからの処理
+		/**
+		 * ログイン情報取得DAO
+		 */
+		private LoginDAO loginDAO = new LoginDAO();
 
-		//ログイン情報を比較 LoginDTO型でせsessionから前述の情報を取り出し、
-		if(((LoginDTO)session.get("loginUser")).getLoginFlg()){
-			result=SUCCESS;
+		/**
+		 * ログイン情報格納IDTO
+		 */
+		private LoginDTO loginDTO = new LoginDTO();
 
-			BuyItemDTO buyItemDTO = buyItemDAO.getBuyItemInfo();
-			session.put("login_user_id",	loginDTO.getLoginId());
-			session.put("id", buyItemDTO.getId());
-			session.put("buyItem_name", buyItemDTO.getItemName());
-			session.put("buyItem_price", buyItemDTO.getItemPrice());
+		/**
+		 * アイテム情報を取得
+		 */
+		private BuyItemDAO buyItemDAO = new BuyItemDAO();
+
+		/**
+		 * 実行メソッド
+		 */
+		public String execute() {
+
+			String result = ERROR;
+
+			// ログイン実行
+			loginDTO = loginDAO.getLoginUserInfo(loginUserId, loginPassword);
+
+			session.put("loginUser", loginDTO);
+
+			// ログイン情報を比較
+			if(((LoginDTO) session.get("loginUser")).getLoginFlg()) {
+				result = SUCCESS;
+
+				// アイテム情報を取得
+				BuyItemDTO buyItemDTO = buyItemDAO.getBuyItemInfo();
+				session.put("login_user_id",	loginDTO.getLoginId());
+				session.put("id", buyItemDTO.getId());
+				session.put("buyItem_name", buyItemDTO.getItemName());
+				session.put("buyItem_price", buyItemDTO.getItemPrice());
+
+				return result;
+			}
 
 			return result;
 		}
 
-		return result;
+		public String getLoginUserId() {
+			return loginUserId;
+		}
+
+		public void setLoginUserId(String loginUserId) {
+			this.loginUserId = loginUserId;
+		}
+
+		public String getLoginPassword() {
+			return loginPassword;
+		}
+
+		public void setLoginPassword(String loginPassword) {
+			this.loginPassword = loginPassword;
+		}
+
+		@Override
+		public void setSession(Map<String, Object> session) {
+			this.session = session;
+		}
 	}
 
-	public String getLoginUserId() {
-		return loginUserId;
-	}
-
-	public void setLoginUserId(String loginUserId) {
-		this.loginUserId = loginUserId;
-	}
-
-	public String getLoginPassword() {
-		return loginPassword;
-	}
-
-	public void setLoginPassword(String loginPassword) {
-		this.loginPassword = loginPassword;
-	}
-
-	@Override
-	public void setSession(Map<String, Object> session) {
-		this.session = session;
-	}
 
 
 
 
 
 
-	}
+
+
 
 
