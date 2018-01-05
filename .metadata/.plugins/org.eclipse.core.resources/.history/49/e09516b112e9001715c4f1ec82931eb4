@@ -1,5 +1,0 @@
-package com.internousdev.ecsiteCreateUser.dto;
-
-public class DBConnector {
-
-}
