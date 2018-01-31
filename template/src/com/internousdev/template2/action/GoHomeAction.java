@@ -6,9 +6,13 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class GoHomeAction extends ActionSupport implements SessionAware{
 
+
 	public Map<String,Object> session;
+	private String Message;
 
 	public String execute(){
+
+
 		return SUCCESS;
 	}
 	public Map<String,Object> getSession(){
@@ -18,5 +22,12 @@ public class GoHomeAction extends ActionSupport implements SessionAware{
 	public void setSession(Map<String,Object>session){
 		this.session=session;
 	}
+	public String getMessage() {
+		return Message;
+	}
+	public void setMessage(String message) {
+		this.Message = message;
+	}
+
 
 }

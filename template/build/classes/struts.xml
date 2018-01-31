@@ -33,6 +33,7 @@
 
     <action name="LoginAction" method="execute" class="com.internousdev.template2.action.LoginAction">
       <result name="success">buyItem.jsp</result>
+      <result name="other">login.jsp</result>
       <result name="error">home.jsp</result>
     </action>
 

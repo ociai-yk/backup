@@ -17,9 +17,11 @@ public class LoginAction extends ActionSupport implements SessionAware{
 	private String loginPassword;
 	private String result;
 	private Map<String,Object>session;
+	private String message;
 
 	private LoginDAO loginDAO=new LoginDAO();
 	private LoginDTO loginDTO=new LoginDTO();
+	private boolean loginFlg;
 
 	private BuyItemDAO buyItemDAO=new BuyItemDAO();
 
@@ -27,12 +29,17 @@ public class LoginAction extends ActionSupport implements SessionAware{
 public String execute(){
 	result=ERROR;
 
+    //ログインフラグがfaleだったら値が取れていない＝＝入力値が異なる
+	//loginUserIdとloginPasswordが空だったらnull
+
 	loginDTO=loginDAO.getLoginUserInfo(loginUserId,loginPassword);
+
 	session.put("loginUser", loginDTO);
 
-	if(((LoginDTO)session.get("loginUser")).getLoginFlg()){
-		result=SUCCESS;
 
+	    /*-------------------------------------------
+	     * 購入　メソッド
+	     ---------------------------------------------*/
 		BuyItemDTO buyItemDTO=buyItemDAO.getBuyItemInfo();
 		session.put("login_user_id", loginDTO.getLoginId());
 		session.put("id", buyItemDTO.getId());
@@ -40,12 +47,10 @@ public String execute(){
 		session.put("buyItem_name",buyItemDTO.getItemName());
 		session.put("buyItem_price",buyItemDTO.getItemPrice());
 
+
 		return result;
 	}
-	return result;
 
-
-}
 public String getLoginUserId(){
 	return loginUserId;
 }
@@ -62,4 +67,18 @@ public void setLoginPassword(String loginPassword){
 public void setSession(Map<String,Object>session){
 	this.session=session;
 }
+public boolean isLoginFlg() {
+	return loginFlg;
+}
+public void setLoginFlg(boolean loginFlg) {
+	this.loginFlg = loginFlg;
+}
+public String getMessage() {
+	return message;
+}
+public void setMessage(String message) {
+	this.message = message;
+}
+
+
 }
