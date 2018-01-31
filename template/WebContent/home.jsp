@@ -8,76 +8,74 @@
 <meta http-equiv="Content-Style-Type" content="text/css"/>
 <meta http-equiv="Content-Script-Type" content="text/javascript"/>
 <meta http-equiv="imagetoolbar" content="no"/>
-<meta name="description" content="" />
-<meta name="keywords" content="" />
+<meta name="discriotion" content=""/>
+<meta name="keywords" content=""/>
 
 <title>Home画面</title>
 <style type="text/css">
-  body{
-  margin:0;
-  padding:0;
-  line-height:1.6;
-  letter-spacing:1px;
-  font-family:Verdana,Helvetica,sans-serif;
-  font-size:12px;
-  color:#333;
-  background:#fff;
-  }
 
-/* Sタグは自動的にtableとして生成されているため */
-
-   table {
-		text-align:center;
-			margin:0 auto;
-	}
-
+body{
+    margin:0;
+    padding:0;
+    line-height:1.6;
+    letter-sapcing:1px;
+    font-family:Verdana,Helvetic,sans-serif;
+    font-size:12px;
+    color:#333;
+    background:#fff;
+}
+table{
+     text-align:center;
+     margin:0 auto;
+}
 #header{
-  width:100%;
-  height:80px;
-  background-color:black;
+       width:100%;
+       height:80px;
+       background-color:black;
 }
 
 #main{
-  width:100%;
-  height:500px;
-  text-align:center;
-}
-#top {
-		   width:780px;
-		   margin:30px auto;
-		   border:1px solid #333;
-		   }
-#footer{
-  width:100%;
-  height:80px;
-  background-color:black;
-  clear:both;
-}
+     width:100%;
+     height:500px;
+     text-align:center;
 
+}
+#top{
+    width:780px;
+    margin:30px auto;
+    border:1px solid #333;
+}
+#footer{
+       width:100%;
+       height:80px;
+       background-color:black;
+}
 
 </style>
 </head>
 <body>
-  <div id="header">
-     <div id=pr>
-     </div>
-  </div>
+
+<div id="footer">
+  <div id="pr"></div>
+</div>
+
 <div id="main">
-    <div id="top">
-     <p>Home</p>
-     </div>
 
-     <div>
-       <s:form action="HomeAction">
-         <s:submit value="商品購入"/>
-       </s:form>
-     </div>
-  </div>
-  <div id="footer">
-     <div id="pr">
-     </div>
+  <div id="top">
+    <p>Home<p>
   </div>
 
+  <div>
+    <s:form action="HomeAction">
+      <s:submit value="商品購入"/>
+    </s:form>
+  </div>
+
+</div>
+
+<div id="footer">
+  <div id="pr"></div>
+</div>
 
 </body>
 </html>
