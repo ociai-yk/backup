@@ -9,5 +9,4 @@ INDEX VERSION 1.3+C:\Users\internousdev\Desktop\workspace\workspace-ochiai\backu
 1831791946.index
 1243057733.index
 2648964521.index
-2078049671.index
 4100954483.index
